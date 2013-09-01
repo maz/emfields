@@ -27,6 +27,11 @@ html,body{
 	width:50px;
 	height:100%;
 	border-right:1px solid rgb(85, 85, 85);
+	overflow:hidden;
+}
+
+#toolbar > a{
+	font-size:11px;
 }
 
 #toolbar > button{
