@@ -1,0 +1,108 @@
+html,body{
+	margin:0;
+	padding:0;
+	width:100%;
+	height:100%;
+	position:absolute;
+	background:rgb(143, 187, 187);
+	font-family:Arial;
+}
+
+#sharing-form{
+	display:none;
+}
+
+#view{
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:200px;
+	height:100%;
+}
+
+#toolbar{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:50px;
+	height:100%;
+	border-right:1px solid rgb(85, 85, 85);
+}
+
+#toolbar > button{
+	width:100%;
+}
+
+#sidebar{
+	position:absolute;
+	right:0px;
+	width:200px;
+	top:0px;
+	height:100%;
+	border-left:1px solid rgb(85, 85, 85);
+}
+
+#sidebar > .field > .editor > *{
+	background-color:white;
+}
+
+#sidebar > .field > .editor{
+	overflow:hidden;
+	width:100%;
+}
+#sidebar > .field > .editor > input[type=text], #sidebar > .field > .editor > select{
+	width:80%;
+}
+#sidebar > .checkbox > .label{
+	display:inline;
+}
+
+#canvas-container{
+	position:absolute;
+	left:51px;
+	right:0px;
+	top:0px;
+	height:100%;
+}
+
+#canvas-container > canvas{
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+
+#sharing-in-progress{
+	display:none;
+}
+
+#sharing-in-progress, #sharing-url{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background-color:rgba(200,200,200,0.75);
+}
+
+#sharing-container{
+	position:absolute;
+	top:50%;
+	left:0px;
+	width:100%;
+	height:80px;
+	margin-top:-40px;
+	padding:0;
+}
+
+#sharing-container > div > input{
+	position:absolute;
+	left:10px;
+	right:10px;
+}
+
+#sharing-container > button{
+	position:absolute;
+	right:10px;
+	bottom:10px;
+	left:10px;
+}
