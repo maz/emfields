@@ -41,7 +41,7 @@ func (m *mongoStore) Get(key string) ([]byte, error) {
 	if err != nil && err != mgo.ErrNotFound {
 		return nil, err
 	}
-	if entry == nil {
+	if entry == nil || err == mgo.ErrNotFound || entry["key"] != key {
 		return nil, &kvs.KeyNotFoundError{key}
 	}
 	data, ok := entry["data"].([]byte)
