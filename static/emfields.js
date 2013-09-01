@@ -272,6 +272,18 @@ $(function(){
 		call_callback('scalar_field');
 	});
 
+	$('#download-image').mousedown(function(){
+		var cans=$('#canvas-container > canvas');
+		var can=document.createElement('canvas');
+		can.width=cans[0].width;
+		can.height=cans[0].height;
+		var ctx=can.getContext('2d');
+		for(var i=0;i<cans.length;i++){
+			ctx.drawImage(cans[i], 0, 0);
+		}
+		$('#download-image').attr('href', can.toDataURL());
+	});
+
 	$('#sharing-close-button').click(function(){
 		$('#sharing-url')[0].style.display='none';
 	});
