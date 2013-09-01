@@ -2,14 +2,10 @@
 <html>
 <head>
 	<title>emfields</title>
-	<link rel="stylesheet" type="text/css" media="all" href="/static/mathquill/mathquill.css"/>
-	<link rel="stylesheet" type="text/css" media="all" href="/static/emfields.css"/>
+	<link rel="stylesheet" type="text/css" media="all" href="static/mathquill/mathquill.css"/>
+	<link rel="stylesheet" type="text/css" media="all" href="static/emfields.css"/>
 </head>
-<body data-value="{{.value}}">
-	<form id="sharing-form" method="post" action="/">
-		<input type="hidden" name="csrf" value="{{.csrf}}"/>
-		<textarea id="sharing-form-textarea" name="value"></textarea>
-	</form>
+<body data-value="null">
 	<div id="view">
 		<div id="toolbar">
 			<button id="share-button">Share</button>
@@ -78,20 +74,10 @@
 			<div class="editor"><input type="text" id="ymax" value="10"/></div>
 		</div>
 	</div>
-	{{if .shared}}
-	<div id="sharing-url">
-		<div id="sharing-container">
-			You can share this URL:
-			<div><input type="text" id="sharing-url-field" value="{{.shared}}" readonly/></div>
-			<button id="sharing-close-button">Close</button>
-		</div>
-	</div>
-	{{end}}
-	<div id="sharing-in-progress"></div>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="/static/mathquill/mathquill.js"></script>
-	<script src="/static/compiler.js"></script>
-	<script src="/static/emfields.js"></script>
+	<script src="static/mathquill/mathquill.js"></script>
+	<script src="static/compiler.js"></script>
+	<script src="static/emfields.js"></script>
 </body>
 </html>
